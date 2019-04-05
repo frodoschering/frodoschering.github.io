@@ -365,7 +365,7 @@ $(document).on('mousemove', function (event) {
 
 	$('#logo-big path').each(function(){
 
-		
+		/*
 
 		Draggable.create(this,{
   type:'y',
@@ -374,7 +374,7 @@ $(document).on('mousemove', function (event) {
   onDragEnd:function(){
    TweenMax.to( this, 1, {xPercent: "+=100",  yPercent: "+=100", ease:Power2.easeOut, rotation: rotate, onComplete: resetLogo});
   }
-});
+});*/
 
 		this.onmouseover = function(){
 			value = speed / 15;
