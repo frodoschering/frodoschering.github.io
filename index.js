@@ -285,38 +285,7 @@ $(document).ready(function() {
 		cy = window.innerHeight / 2;
 	});
 
-	/*
-	var bodyElement = document.querySelector("body");
-	bodyElement.addEventListener("mousemove", getMouseDirection, false);
-	 
-	var xDirection = "";
-	var yDirection = "";
-	 
-	var oldX = 0;
-	var oldY = 0;
-	 
-	function getMouseDirection(e) {
-	    //deal with the horizontal case
-	    if (oldX < e.pageX) {
-	        xDirection = "right";
-	    } else {
-	        xDirection = "left";
-	    }
-	 
-	    //deal with the vertical case
-	    if (oldY < e.pageY) {
-	        yDirection = "down";
-	    } else {
-	        yDirection = "up";
-	    }
-	 
-	    oldX = e.pageX;
-	    oldY = e.pageY;
-	 
-	    console.log(xDirection );
-	    console.log(yDirection );
-	}*/
-
+/*
 if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
         // alpha: rotation around z-axis
@@ -336,6 +305,7 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 	      ease: Power2.easeOut
 	    });
 };
+*/
 
 	//setup a variable to store our last position
 var last_position = {},
@@ -395,7 +365,16 @@ $(document).on('mousemove', function (event) {
 
 	$('#logo-big path').each(function(){
 
-		//Draggable.create(this);
+		
+
+		Draggable.create(this,{
+  type:'y',
+  lockAxis : true ,
+  trigger:$("#stage"),
+  onDragEnd:function(){
+   TweenMax.to( this, 1, {xPercent: "+=100",  yPercent: "+=100", ease:Power2.easeOut, rotation: rotate, onComplete: resetLogo});
+  }
+});
 
 		this.onmouseover = function(){
 			value = speed / 15;
