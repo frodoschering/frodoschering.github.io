@@ -317,6 +317,26 @@ $(document).ready(function() {
 	    console.log(yDirection );
 	}*/
 
+if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function(event) {
+        // alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+        // gamma: left to right
+        var leftToRight = event.gamma;
+        // beta: front back motion
+        var frontToBack = event.beta;
+
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    }, true);
+}
+
+var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
+   TweenLite.to("#logo-big", 1, {
+	      transform: 'rotate3d(' + leftToRight + ', ' + frontToBack + ', 0, ' + rotateDegrees + 'deg)',
+	      ease: Power2.easeOut
+	    });
+};
+
 	//setup a variable to store our last position
 var last_position = {},
 $output       = $('#output');
