@@ -272,7 +272,7 @@ $(document).ready(function() {
 	    tiltx = (dy / cy);
 	    tilty = -(dx / cx);
 	    radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
-	    degree = (radius * 60);
+	    degree = (radius * 40);
 	    TweenLite.to("#logo-big", 1, {
 	      transform: 'rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)',
 	      ease: Power2.easeOut
