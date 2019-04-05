@@ -1,0 +1,467 @@
+body, html{
+	background: transparent;
+	color: #fff;
+	font-family: sofia-pro;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.6em;
+	font-size: 21px;
+	margin: 0;
+	height: 100%;	
+	width: 100vw;
+	overflow-x: hidden;
+
+}
+
+
+a, a:visited{
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+}
+
+header, #content, #current-content{
+	
+	margin: 0 auto;
+	position: absolute;	
+	z-index: 2;
+	width: calc(100% - 3.524em);
+}
+
+header{
+	padding: 1.778em;
+	z-index: 5;
+	height: 1.778em;
+}
+
+#email-address{
+	font-size: 1.777em;
+	top: 50%;
+	position: absolute;
+	left: 50%; /* position the left edge of the element at the middle of the parent */
+
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#work-svg{
+	//display: none;
+	fill: #484C52;
+	overflow: visible;
+	display: inline-block;
+	overflow: visible;
+	position: relative;
+	width: calc(100vw - 3.238em);
+}
+
+#content, #current-content{
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	min-height: 100vh;
+	visibility: hidden;	
+}
+
+#content p, #current-content p{
+	display: inline-block;
+	text-align: left;
+	margin: calc(70px + 3.16em) 0 3.16em 0;
+	padding: 0;
+	width: 35.95em;
+	vertical-align: top;
+}
+
+header{
+	overflow: hidden;
+	opacity: 0;
+}
+
+#home-link{
+	display: block;
+	float: left;
+	overflow: hidden;
+	line-height: 0;
+}
+
+
+#background{
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	//display: table;
+	//position: absolute;
+
+}
+
+#logo-container{
+	//display: table-cell;
+	//height: 100vh;
+	width: 100vw;
+	vertical-align: middle;
+	text-align: center;
+	z-index: 1;
+	overflow: visible;
+			top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+
+}
+
+header{
+	pointer-events:none; 
+}
+
+#background{
+	cursor: url('images/crosshair.png') 33 33, default;	
+}
+
+
+#team{
+	width: 100%;
+	margin: 0 0  3.16em;
+}
+
+
+#logo {
+	height: 1.778em;
+pointer-events:all; 
+	cursor: pointer;
+}
+
+#logo path{
+	fill: #fff;
+	
+}
+
+#logo-big{
+	display: inline-block;
+	overflow: visible;
+	position: relative;
+	width: calc(100vw - 3.524em);
+
+
+}
+
+#logo-big path{
+	
+}
+
+nav{
+	float: right;
+}
+
+nav ul{
+	margin: 0;
+}
+
+nav ul li {
+	float: left;
+	margin-left: 1.6019em;
+	list-style: none;
+	font-weight: 500;
+	font-size: 1em;
+	opacity: 0.60;
+	cursor: pointer;
+	z-index: 20;
+	pointer-events:all; 
+}
+
+img{
+	max-width: 100%;
+	margin: 24px 0;
+}
+
+#cover-image{
+	max-width: 100%;	
+	margin: 40px auto;
+}
+
+h1{	
+	width: calc(50% - 12px);
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 35px;
+}
+
+p, h1, h2{
+	width: 29.04em;
+	margin: 1em auto;
+}
+
+#home h1{
+	width: calc(50% - 12px);
+	float: left;
+	margin-right: 24px;
+	max-width: 100%;
+}
+
+h2{
+	font-size: 24px;
+	font-weight: 500;
+	
+}
+
+
+#introduction-text{
+	width: 33.095rem;
+	position: absolute;
+	bottom: 1em;
+	right: 0;
+	font-size: 1.333em;
+	line-height: 1.857rem;
+	z-index: 10000;
+	opacity: 0;
+}
+
+
+
+#introduction{
+	font-size: 24px;
+	line-height: 35px;
+	text-align: center;
+}
+
+#headline-container{
+	margin: 0 auto;
+	max-width: 685px;
+	//text-align: left;
+}
+
+#headline{
+	height: 90px;
+	max-width: 100%;
+}
+
+#zodiac-headline{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 1.61904em;
+	top:-11.25vh;
+	width: calc(100vw - 3.23809em);
+	
+	overflow: visible;
+}
+
+#zodiac-headline #headline-container{
+	//transform: translate(0,-150px);
+	
+}
+
+
+#zodiac-headline path, #zodiac-headline rect, #zodiac-headline polygon, #zodiac-headline circle{
+	fill: #358DD8;
+}
+
+#content2{
+	background-color: white;
+	color: #000;
+	padding: 48px 0;
+}
+
+.image-small{
+	float: left;
+	max-width: calc(50% - 12px);
+	margin: 12px 24px 12px 0;
+}
+
+.image-small:nth-of-type(2n){
+	margin-right: 0;
+}
+
+.image-small-container{
+	margin: 96px 0;
+	overflow: hidden;
+}
+
+
+.blue{
+	background-color: #041B74;
+}
+
+.blue .color1{
+	fill: #1882FF;
+}
+
+.blue .color2{
+	fill: #06FCFF;
+}
+
+.blue .color3{
+	fill: #09ABE8;
+}
+
+
+.red{
+	background-color: #741707;
+}
+
+.red .color1{
+	fill: #FF4D00;
+}
+
+.red .color2{
+	fill: #FF0E0D;
+}
+
+.red .color3{
+	fill: #E86E0C;
+}
+
+.dark{
+	background-color: #160827;
+}
+
+.dark .color1{
+	fill: #620A2A;
+}
+
+.dark .color2{
+	fill: #EE0023;
+}
+
+.dark .color3{
+	fill: #9C0428;
+}
+
+.grey{
+	background-color: #000;
+}
+
+.grey .color1{
+	fill: #464A4F;
+}
+
+.grey .color2{
+	fill: #1E2124;
+}
+
+.grey .color3{
+	fill: #323539;
+}
+
+
+
+#zodiac-headline .color1{
+	fill: #205582;
+}
+
+#zodiac-headline .color2{
+	fill: #2A71AD;
+}
+
+#zodiac-headline .color3{
+	fill: #358DD8;
+}
+
+#team{
+
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 2652px;
+}
+
+#team-profiles{
+	margin:0;
+		 grid-gap: 0;
+	grid-template-columns:  repeat(4, 663px);
+	align-items: center;
+	display: grid;
+}
+
+#projects{
+	margin:  5.286em auto 0; 
+	overflow: hidden;
+
+	width: calc(100% - 3.238rem);
+}
+
+video{
+	width: 100%;
+}
+
+.project-big{
+	text-align: left;
+	
+	width: 100%;
+	
+}
+
+.project-small{
+	text-align: left;
+	width: calc(50% - 17px);
+	float: left;
+}
+
+.project-small:nth-child(2){
+	margin-right:  34px;
+}
+
+.project-big a, .project-small a{
+	font-weight: 500;
+	font-size: 1.3333rem; 
+	margin: 1rem 0  1.778em;
+	display: block;
+}
+
+.project-big img, .project-small img{
+	margin: 0;
+	display: block;
+}
+
+.profile{
+
+	text-align: left;
+	width: 31.571em;
+}
+
+.profile .photo{
+	width: 100%;
+	height: 17.952em;
+	background-color: gray;
+	margin:0;
+	padding: 0;
+	display: inline-block;
+}
+
+.arrow{
+	height: 3.143em;
+	width: auto;
+	position: absolute;
+	z-index: 10000;
+}
+
+#arrow-right{
+	right:1.778em;
+	top: 26.25em;
+}
+
+#arrow-left{
+	left:1.778em;
+	top: 26.25em;
+}
+
+#current-content .profile-info p, #content .profile-info p{
+	margin:0;
+	padding:0;
+}
+
+.profile-info{
+	overflow: hidden;
+	margin: 1em 0 0;
+}
+
+
+
+.profile-info .name{
+	font-weight: 500;
+	font-size: 1.333em;
+}
