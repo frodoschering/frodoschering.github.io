@@ -181,7 +181,7 @@ $(document).ready(function() {
 	// Go to about page
 	$("#about").on('click', function() {
 		page = "about";
-		$('#content').load('about.html', function(){		
+		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
 			changeColor("#000", "#464A4F", "#1E2124", "#323539");
 			TweenMax.to("#email-address", 0.5, {autoAlpha: 0});
 			TweenMax.to("#introduction-text", 0.5, {autoAlpha: 0});
@@ -195,7 +195,7 @@ $(document).ready(function() {
 	// Go to work page
 	$("#work").on('click', function() {
 		page = "work";
-		$('#content').load('work.html', function(){
+		$('#content').load('http://localhost:8888/manyone/work.html', function(){
 			changeColor("#000", "#464A4F", "#1E2124", "#323539");	
 			TweenMax.to("#email-address", 0.5, {autoAlpha: 0});		
 			TweenMax.to("#introduction-text", 0.5, {autoAlpha: 0});		
@@ -220,6 +220,20 @@ $(document).ready(function() {
 			page = "contact";
 	
 
+		
+	})
+
+	// Go to contact page
+	$("#zodiac").on('click', function() {
+		
+			$('#content').load('http://localhost:8888/manyone/zodiac.html', function(){
+				changeColor("#000", "#464A4F", "#1E2124", "#323539");	
+				TweenMax.to("#email-address", 0.5, {autoAlpha: 0});		
+				TweenMax.to("#introduction-text", 0.5, {autoAlpha: 0});		
+				TweenMax.to("#logo-container", 0.5, {autoAlpha: 0});
+				TweenMax.to("#current-content", 0.5, {autoAlpha: 0});
+				TweenMax.to("#content", 1, {autoAlpha: 1, onComplete: switchContentDivs});	
+			})		
 		
 	})
 
@@ -285,27 +299,37 @@ $(document).ready(function() {
 		cy = window.innerHeight / 2;
 	});
 
-/*
-if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
-
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
-}
-
-var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-   TweenLite.to("#logo-big", 1, {
-	      transform: 'rotate3d(' + leftToRight + ', ' + frontToBack + ', 0, ' + rotateDegrees + 'deg)',
-	      ease: Power2.easeOut
-	    });
-};
-*/
+	/*
+	var bodyElement = document.querySelector("body");
+	bodyElement.addEventListener("mousemove", getMouseDirection, false);
+	 
+	var xDirection = "";
+	var yDirection = "";
+	 
+	var oldX = 0;
+	var oldY = 0;
+	 
+	function getMouseDirection(e) {
+	    //deal with the horizontal case
+	    if (oldX < e.pageX) {
+	        xDirection = "right";
+	    } else {
+	        xDirection = "left";
+	    }
+	 
+	    //deal with the vertical case
+	    if (oldY < e.pageY) {
+	        yDirection = "down";
+	    } else {
+	        yDirection = "up";
+	    }
+	 
+	    oldX = e.pageX;
+	    oldY = e.pageY;
+	 
+	    console.log(xDirection );
+	    console.log(yDirection );
+	}*/
 
 	//setup a variable to store our last position
 var last_position = {},
@@ -365,16 +389,7 @@ $(document).on('mousemove', function (event) {
 
 	$('#logo-big path').each(function(){
 
-		/*
-
-		Draggable.create(this,{
-  type:'y',
-  lockAxis : true ,
-  trigger:$("#stage"),
-  onDragEnd:function(){
-   TweenMax.to( this, 1, {xPercent: "+=100",  yPercent: "+=100", ease:Power2.easeOut, rotation: rotate, onComplete: resetLogo});
-  }
-});*/
+		//Draggable.create(this);
 
 		this.onmouseover = function(){
 			value = speed / 15;
