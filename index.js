@@ -195,7 +195,7 @@ $(document).ready(function() {
 	// Go to work page
 	$("#work").on('click', function() {
 		page = "work";
-		$('#content').load('https://frodoschering.github.io/manyone/work.html', function(){
+		$('#content').load('https://frodoschering.github.io/work.html', function(){
 			changeColor("#000", "#464A4F", "#1E2124", "#323539");	
 			TweenMax.to("#email-address", 0.5, {autoAlpha: 0});		
 			TweenMax.to("#introduction-text", 0.5, {autoAlpha: 0});		
