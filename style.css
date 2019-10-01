@@ -418,15 +418,15 @@ video{
 }
 
 .profile{
-	position: absolute;
+
 	text-align: left;
-	width: 240px;
+	width: 31.571em;
 }
 
 .profile .photo{
 	width: 100%;
-
-	background-color: #111;
+	height: 17.952em;
+	background-color: gray;
 	margin:0;
 	padding: 0;
 	display: inline-block;
@@ -441,12 +441,12 @@ video{
 
 #arrow-right{
 	right:1.778em;
-	top: 27.25em;
+	top: 26.25em;
 }
 
 #arrow-left{
 	left:1.778em;
-	top: 27.25em;
+	top: 26.25em;
 }
 
 #current-content .profile-info p, #content .profile-info p{
