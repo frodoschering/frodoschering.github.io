@@ -181,24 +181,9 @@ $(document).ready(function() {
 	// Go to about page
 	$("#about").on('click', function() {
 		page = "about";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 		$('#content').load('http://localhost:8888/frodoschering.github.io/about.html', function(){	
 		//$('#content').load('https://frodoschering.github.io/about.html', function(){	
-=======
-		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
->>>>>>> parent of afb1a5f... Update index.js
-=======
-		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
->>>>>>> parent of afb1a5f... Update index.js
-=======
-		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
->>>>>>> parent of afb1a5f... Update index.js
-=======
-		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
->>>>>>> parent of afb1a5f... Update index.js
 			changeColor("#000", "#464A4F", "#1E2124", "#323539");
 			TweenMax.to("#email-address", 0.5, {autoAlpha: 0});
 			TweenMax.to("#introduction-text", 0.5, {autoAlpha: 0});
@@ -212,21 +197,10 @@ $(document).ready(function() {
 	// Go to work page
 	$("#work").on('click', function() {
 		page = "work";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 		$('#content').load('http://localhost:8888/manyone/work.html', function(){
 		//$('#content').load('https://frodoschering.github.io/work.html', function(){
-=======
-=======
->>>>>>> parent of afb1a5f... Update index.js
-=======
->>>>>>> parent of afb1a5f... Update index.js
-=======
->>>>>>> parent of afb1a5f... Update index.js
-		$('#content').load('https://frodoschering.github.io/work.html', function(){
->>>>>>> parent of afb1a5f... Update index.js
+
 			changeColor("#000", "#464A4F", "#1E2124", "#323539");	
 			TweenMax.to("#email-address", 0.5, {autoAlpha: 0});		
 			TweenMax.to("#introduction-text", 0.5, {autoAlpha: 0});		
