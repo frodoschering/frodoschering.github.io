@@ -184,8 +184,12 @@ $(document).ready(function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$('#content').load('http://localhost:8888/frodoschering.github.io/about.html', function(){	
 		//$('#content').load('https://frodoschering.github.io/about.html', function(){	
+=======
+		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
+>>>>>>> parent of afb1a5f... Update index.js
 =======
 		$('#content').load('http://localhost:8888/manyone/about.html', function(){		
 >>>>>>> parent of afb1a5f... Update index.js
@@ -211,9 +215,12 @@ $(document).ready(function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		$('#content').load('http://localhost:8888/manyone/work.html', function(){
 		//$('#content').load('https://frodoschering.github.io/work.html', function(){
 =======
+=======
+>>>>>>> parent of afb1a5f... Update index.js
 =======
 >>>>>>> parent of afb1a5f... Update index.js
 =======
