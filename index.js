@@ -181,7 +181,7 @@ $(document).ready(function() {
 	// Go to about page
 	$("#about").on('click', function() {
 		page = "about";
-		$('#content').load('http://localhost:8888/manyone/about.html', function(){	
+		$('#content').load('http://localhost:8888/frodoschering.github.io/about.html', function(){	
 		//$('#content').load('https://frodoschering.github.io/about.html', function(){	
 			changeColor("#000", "#464A4F", "#1E2124", "#323539");
 			TweenMax.to("#email-address", 0.5, {autoAlpha: 0});

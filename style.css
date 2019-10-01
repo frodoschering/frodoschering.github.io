@@ -418,14 +418,14 @@ video{
 }
 
 .profile{
-
+	position: absolute;
 	text-align: left;
-	width: 31.571em;
+	width: 240px;
 }
 
 .profile .photo{
 	width: 100%;
-	height: 17.952em;
+
 	background-color: #111;
 	margin:0;
 	padding: 0;
