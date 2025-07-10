@@ -282,11 +282,7 @@
                 height: 42px;
                 width: auto;
             }
-            
-            .female-with-dropdown{
-                margin: 5.25px 0 0 10.5px;
-            }       
-            
+    
             .icon-button{
                 height: 57.524px;
                 width:  57.524px;
@@ -375,7 +371,7 @@
         // use a script tag or an external JS file
         document.addEventListener("DOMContentLoaded", (event) => {
 
-             const parent = document.getElementById('parent');
+            const parent = document.getElementById('parent');
             const indicator = document.getElementById('indicator');
 
             // Delegate clicks so it works for every current or future child
@@ -402,90 +398,35 @@
                
             });
 
-            //  // Function to adapt layout
-            //     function adjustLayout() {
-                    
-            //     if (window.innerWidth >= 1970) {
-                    
-            //        const el = document.querySelector('#indicator');
-
-            //         // Get computed style
-            //         const computedStyle = window.getComputedStyle(el);
-            //         const right = computedStyle.right;
-
-            //         if (right.endsWith('vw')) {
-            //             console.log('bla');
-            //         const rightVw = parseFloat(right); // remove 'vw'
-            //         const vw = window.innerWidth;
-
-            //         // Convert vw to px
-            //         const rightPx = (rightVw / 100) * vw;
-
-            //         console.log(`Converted right: ${rightVw}vw = ${rightPx}px`);
-
-            //         // Optional: apply it as px if you want
-            //         el.style.right = `${rightPx}px`;
-            //         }                    
-       
-            //     } else {
-                  
-            //        const el = document.querySelector('#indicator');
-
-            //         // Get computed style for the element
-            //         const computedStyle = window.getComputedStyle(el);
-            //         const rightPx = parseFloat(computedStyle.right); // in px
-
-            //         // Get viewport width
-            //         const vw = window.innerWidth;
-
-            //         // Convert px to vw
-            //         const rightVw = (rightPx / vw) * 100;
-
-            //         // Apply the value back in vw
-            //         el.style.right = `${rightVw}vw`;
-
-            //         console.log(`Converted right from ${rightPx}px to ${rightVw}vw`);
-                
-
-            //     } };
-                
-            //     // Initial layout adjustment
-            //     adjustLayout();
-
-            //     // Adjust layout upon window resize
-            //     window.addEventListener('resize', adjustLayout);
-
              /* === SETTINGS === */
-const BREAKPOINT        = 1970;              // px
-const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
+            const BREAKPOINT        = 1970;              // px
+            const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
 
-/* === HELPERS === */
-const pxToVw = (px, vw) => (px / vw) * 100;
+            /* === HELPERS === */
+            const pxToVw = (px, vw) => (px / vw) * 100;
 
-/* === CORE === */
-function updateRightUnits () {
-  const viewport = window.innerWidth;
-  const usePx    = viewport > BREAKPOINT;   // true ⇒ write px, false ⇒ write vw
+            /* === CORE === */
+            function updateRightUnits () {
+            const viewport = window.innerWidth;
+            const usePx    = viewport > BREAKPOINT;   // true ⇒ write px, false ⇒ write vw
 
-  document.querySelectorAll(ADAPTIVE_SELECTOR).forEach(el => {
-    // 1. current offset in px (browser always gives px)
-    const currentPx = parseFloat(getComputedStyle(el).right);
+            document.querySelectorAll(ADAPTIVE_SELECTOR).forEach(el => {
+                // 1. current offset in px (browser always gives px)
+                const currentPx = parseFloat(getComputedStyle(el).right) ;
 
-    // 2. rewrite in the target unit
-    if (usePx) {
-      el.style.right = `${currentPx}px`;
-    } else {
-      el.style.right = `${pxToVw(currentPx, viewport)}vw`;
-    }
-  });
-}
+                // 2. rewrite in the target unit
+                if (usePx) {
+                el.style.right = `${currentPx}px`;
+                } else {
+                el.style.right = `${pxToVw(currentPx, viewport)}vw`;
+                }
+            });
+            }
 
-/* === INIT & RESIZE === */
-window.addEventListener("resize",        updateRightUnits, { passive: true });
-window.addEventListener("DOMContentLoaded", updateRightUnits);
-            
-
-         
+            /* === INIT & RESIZE === */
+            window.addEventListener("resize", updateRightUnits, { passive: true });
+            window.addEventListener("DOMContentLoaded", updateRightUnits);
+                                 
         });
 
         
