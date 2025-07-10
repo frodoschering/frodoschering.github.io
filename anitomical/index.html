@@ -9,7 +9,7 @@
 
         html {    
             font-family: "neuzeit-grotesk";
-            font-size:  1.4vw;
+            font-size:  1.5vw;
         }
 
         body, p, h2, li{
@@ -59,9 +59,6 @@
             height: 92vh;
             width: 100%;
         }
-
-
-         
 
         #navigation, #content {     
             padding: 1.3484rem 1.348rem;
@@ -113,7 +110,7 @@
             right: 19.8478vw;
             bottom: 0;
             position: absolute;
-            height: 0.382rem;
+            height: 0.318rem;
             width: 2.618rem;
         }
 
@@ -241,7 +238,7 @@
         }
 
 
-        @media only screen and (min-width:1800px){
+        @media only screen and (min-width:1750px){
 
             html{
                 font-size: 24px;
@@ -347,7 +344,7 @@
 
                 const distanceFromRightPx = (viewportWidth - rect.right) + rect.width/4;
 
-                if(window.innerWidth >= 1800){
+                if(window.innerWidth >= 1750){
                     const distanceFromRight = distanceFromRightPx;
                     TweenMax.to("#indicator", 0.3, {right:distanceFromRight} );
                 } else {
@@ -361,7 +358,7 @@
             });
 
              /* === SETTINGS === */
-            const BREAKPOINT        = 1800;              // px
+            const BREAKPOINT        = 1750;              // px
             const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
 
             /* === HELPERS === */
