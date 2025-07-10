@@ -23,12 +23,8 @@
         a{
             border-radius: 10vw;
             color: #4F4262;  
-            padding: 0.618rem 1rem;
+            padding: 0.8vw 1.32vw;
             text-decoration: none;
-        }
-
-        #logo{               
-            max-width: 252px;
         }
 
         a:hover{ 
@@ -45,9 +41,6 @@
              height: 100vh;
              overflow: hidden;
         }
-
-        
-    
         
         #navigation {
             display: flex;
@@ -63,11 +56,8 @@
             width: 100%;
         }
 
-
-         
-
         #navigation, #content {     
-            padding: 1.3484rem 1.348rem;
+            padding: 1.59vw 1.68vw;
         }
 
          #navigation img{
@@ -81,9 +71,10 @@
 
         h2{
             font-weight: bold;
-             margin: 1rem 0;
+            margin: 1.06vw 0;
         }
-     
+        
+        
         #sketchfab{
             background-color: #D9D9D9;
             width: 100%;
@@ -102,7 +93,7 @@
         #navigation ul li{
             float: left;
             list-style-type: none;
-            margin: 0 0.382rem;
+            margin: 0 0.4vw;
             overflow: visible;
         }
 
@@ -113,18 +104,18 @@
         #indicator{
             background-color: #EC681C;
             border-radius: 1vw 1vw 0 0;
-            right: 19.8478vw;
+            right: 19.4vw;
             bottom: 0;
             position: absolute;
-            height: 0.382rem;
-            width: 2.618rem;
+            height: 0.4vw;;
+            width: 3vw;
         }
 
         h1{
             font-size: 1.348rem;
             font-weight: bold;
-            line-height: 2.182rem;
-            margin: 0.833rem 0;
+            line-height: 2.71vw;
+            margin: 1.06vw 0;
         }
 
         .animal-name-container{
@@ -151,7 +142,7 @@
         }
 
         #animal-toolbar{
-            padding: 1rem 1.3484rem;
+            padding: 1.32vw 1.68vw;
             position: absolute;
             width: 58.5vw;
             display: flex;
@@ -160,16 +151,17 @@
         }
 
         .chapters {
-            margin: 1.618rem 0;
+            margin: 1.68vw 0;
             padding-inline-start: 0;
         }
         
         .chapters li{
             border-bottom: 1px solid #BCBCBC;
+            /* border-radius: 2vw; */
             font-weight: bold;
             list-style-position: inside;
-            padding: 0.833rem 1.3484rem;
-            margin: 0;
+            padding: 0.8vw 1.68vw;
+            /* margin: 1.06vw 0; */
         }
 
         .chapters li:first-child{
@@ -192,7 +184,7 @@
 
         .icon{
             fill: #4F4262;
-            height: 1.618rem;
+            height: 2.132vw;
             width: auto;
         }
 
@@ -212,11 +204,12 @@
             gap: 0.41vw;
         }
         
+
         .icon-button{
             background-color: #E7E6EA;
-            height: 2.182rem;
-            width:  2.182rem;
-            border-radius: 2.182rem;
+            height: 2.92vw;
+            width:  2.92vw;
+            border-radius: 2.92vw;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -236,22 +229,93 @@
         }
 
          #sidepanel h2{
-            padding: 1.3484rem 1.348rem 0 1.3484rem;
+            padding: 1.59vw 1.68vw 0 1.68vw;
         }
 
         #sidepanel p{
-            padding: 0 1.3484rem 0 1.348rem;
+            padding: 0 1.68vw 0 1.68vw;
         }
-
 
         @media only screen and (min-width:1900px){
 
             html{
-                font-size: 24px;
+                font-size: 25px;
             }
 
-            #indicator{     
-                right: 360px;                       
+            body, p, h2, li{
+                color: #4F4262;
+                margin: 0;
+                font-size: 1rem;
+                line-height: 1.618rem;
+            }
+
+            h2{
+                margin: 1rem 0;
+            }
+
+            a{
+                padding: 0.618rem 1rem;
+            }
+
+            #logo{               
+                max-width: 252px;
+            }
+            #navigation ul li{
+                margin: 0 0.382rem;
+             }
+
+            #navigation, #content {     
+                padding: 1.3484rem 1.348rem;
+            }
+
+            #sidepanel h2{
+                padding: 1.3484rem 1.348rem 0 1.3484rem;
+            }
+
+            #sidepanel p{
+                padding: 0 1.3484rem 0 1.348rem;
+            }
+
+            #indicator{  
+                border-radius: 1rem 1rem 0 0;
+                right: 360px;             
+                height: 8px;
+                top: 4.35rem;
+                width: 2.618rem;
+            }
+            
+            h1{
+                font-size: 1.348rem;
+                font-weight: bold;
+                line-height: 2.182rem;
+                margin: 0.833rem 0;
+            }
+
+             #animal-toolbar{
+                padding: 1rem 1.3484rem;
+             }
+
+            .chapters {
+                margin: 1.618rem 0;
+                padding-inline-start: 0;
+            }
+        
+            .chapters li{                           
+                font-weight: bold;
+                list-style-position: inside;
+                padding: 0.833rem 1.3484rem;
+                margin: 0;
+            }
+
+            .icon{
+                height: 1.618rem;
+                width: auto;
+            }
+    
+            .icon-button{
+                height: 2.182rem;
+                width:  2.182rem;
+                border-radius: 2.182rem;
             }
 
         }
@@ -350,7 +414,7 @@
 
                 const distanceFromRightPx = (viewportWidth - rect.right) + rect.width/4;
 
-                if(window.innerWidth >= 1900){
+                if(window.innerWidth >= 1970){
                     const distanceFromRight = distanceFromRightPx;
                     TweenMax.to("#indicator", 0.3, {right:distanceFromRight} );
                 } else {
@@ -364,7 +428,7 @@
             });
 
              /* === SETTINGS === */
-            const BREAKPOINT        = 1900;              // px
+            const BREAKPOINT        = 1970;              // px
             const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
 
             /* === HELPERS === */
