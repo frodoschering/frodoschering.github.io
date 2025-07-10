@@ -45,10 +45,7 @@
              height: 100vh;
              overflow: hidden;
         }
-
-        
-    
-        
+  
         #navigation {
             display: flex;
             align-items: center;
@@ -231,8 +228,8 @@
             background-color: #ffffff;
         }
 
-         #sidepanel #content{
-                padding: 0;
+        #sidepanel #content{
+            padding: 0;
         }
 
          #sidepanel h2{
@@ -244,7 +241,7 @@
         }
 
 
-        @media only screen and (min-width:1900px){
+        @media only screen and (min-width:1800px){
 
             html{
                 font-size: 24px;
@@ -350,7 +347,7 @@
 
                 const distanceFromRightPx = (viewportWidth - rect.right) + rect.width/4;
 
-                if(window.innerWidth >= 1900){
+                if(window.innerWidth >= 1800){
                     const distanceFromRight = distanceFromRightPx;
                     TweenMax.to("#indicator", 0.3, {right:distanceFromRight} );
                 } else {
@@ -364,7 +361,7 @@
             });
 
              /* === SETTINGS === */
-            const BREAKPOINT        = 1900;              // px
+            const BREAKPOINT        = 1800;              // px
             const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
 
             /* === HELPERS === */
