@@ -107,7 +107,7 @@
         #indicator{
             background-color: #EC681C;
             border-radius: 1vw 1vw 0 0;
-            right: 19.8478vw;
+            right: 15rem;
             bottom: 0;
             position: absolute;
             height: 0.318rem;
@@ -344,47 +344,51 @@
 
                 const distanceFromRightPx = (viewportWidth - rect.right) + rect.width/4;
 
+                function pxToRem(px) {
+                    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+                    return px / rootFontSize;
+                }
+
+                const remValue = pxToRem(distanceFromRightPx);
+                
                 if(window.innerWidth >= 1750){
                     const distanceFromRight = distanceFromRightPx;
-                    TweenMax.to("#indicator", 0.3, {right:distanceFromRight} );
+                    TweenMax.to("#indicator", 0.3, {right:`${remValue}rem`} );
                 } else {
                     const distanceFromRight = (distanceFromRightPx / window.innerWidth) * 100 + 'vw';
-                    TweenMax.to("#indicator", 0.3, {right:distanceFromRight} );
+                    TweenMax.to("#indicator", 0.3, {right:`${remValue}rem`} );
                 }
- 
-                console.log('Distance from right edge of viewport:', distanceFromRight);
-              
                
             });
 
-             /* === SETTINGS === */
-            const BREAKPOINT        = 1750;              // px
-            const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
+            //  /* === SETTINGS === */
+            // const BREAKPOINT        = 1750;              // px
+            // const ADAPTIVE_SELECTOR = ".adaptive-right"; // customise if you like
 
-            /* === HELPERS === */
-            const pxToVw = (px, vw) => (px / vw) * 100;
+            // /* === HELPERS === */
+            // const pxToVw = (px, vw) => (px / vw) * 100;
 
-            /* === CORE === */
-            function updateRightUnits () {
-            const viewport = window.innerWidth;
-            const usePx    = viewport > BREAKPOINT;   // true ⇒ write px, false ⇒ write vw
+            // /* === CORE === */
+            // function updateRightUnits () {
+            // const viewport = window.innerWidth;
+            // const usePx    = viewport > BREAKPOINT;   // true ⇒ write px, false ⇒ write vw
 
-            document.querySelectorAll(ADAPTIVE_SELECTOR).forEach(el => {
-                // 1. current offset in px (browser always gives px)
-                const currentPx = parseFloat(getComputedStyle(el).right) ;
+            // document.querySelectorAll(ADAPTIVE_SELECTOR).forEach(el => {
+            //     // 1. current offset in px (browser always gives px)
+            //     const currentPx = parseFloat(getComputedStyle(el).right) ;
 
-                // 2. rewrite in the target unit
-                if (usePx) {
-                el.style.right = `${currentPx}px`;
-                } else {
-                el.style.right = `${pxToVw(currentPx, viewport)}vw`;
-                }
-            });
-            }
+            //     // 2. rewrite in the target unit
+            //     if (usePx) {
+            //     el.style.right = `${currentPx}px`;
+            //     } else {
+            //     el.style.right = `${pxToVw(currentPx, viewport)}vw`;
+            //     }
+            // });
+            // }
 
-            /* === INIT & RESIZE === */
-            window.addEventListener("resize", updateRightUnits, { passive: true });
-            window.addEventListener("DOMContentLoaded", updateRightUnits);
+            // /* === INIT & RESIZE === */
+            // window.addEventListener("resize", updateRightUnits, { passive: true });
+            // window.addEventListener("DOMContentLoaded", updateRightUnits);
                                  
         });
 
