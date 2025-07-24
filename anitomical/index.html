@@ -108,8 +108,8 @@
         #indicator{
             background-color: #EC681C;
             border-radius: 1vw 1vw 0 0;
-            right: 15rem;
-            bottom: 0;
+            right: 22.2rem;
+            bottom: 0;  
             position: absolute;
             height: 0.318rem;
             width: 2.618rem;
@@ -272,15 +272,39 @@
             transition: opacity 1s ease;
         }
 
-        /* Class to trigger fade-out */
         #cover.fade-out {
             opacity: 0;
         }
 
         video {
             height: auto;
-            width: 12rem;
+            width: 11rem;
         }
+
+        .annotation{
+            background-color: rgb(13,13,13,0.6);
+            float: left;
+            display: flex;
+            color: white;
+            font-size: 0.778rem;
+            border-radius: 2rem;
+            padding: 0 0.778rem;
+            position: absolute;
+            opacity: 0.65;
+        }
+
+        #annotation-4{
+            right: 14rem;
+            top: 20rem;
+        }
+
+        .icon-small-inline{
+            align-self: center;
+            height: 0.618rem;
+            padding: 0 0 0 0.382rem;
+            width: auto;
+        }
+
 
         @media only screen and (min-width:1600px){
 
@@ -289,7 +313,7 @@
             }
 
             #indicator{     
-                right: 360px;                       
+                right: 535px;                       
             }
 
         }
@@ -311,6 +335,7 @@
                 <li><a class="child" href="#">Explore</a></li>
                 <li><a class="child" href="#">Dissect</a></li>
                 <li><a class="child" href="#">Compare</a></li>
+                <li><a class="child" href="#">References</a></li>
             </ul>
         </div>           
         <div id="sidepanel">
@@ -344,6 +369,7 @@
         </div> 
                     
         <div id="sketchfab">
+            <!-- <div class="annotation" id="annotation-4">4. Reproduction<img class="icon-small-inline" src="chevron-small.svg"/></div> -->
             <div id="animal-toolbar">
                 <div class="animal-name-container"><h1 class="animal-name">Roman Snail</h1><a class="icon-button" href="#"><img class="icon female-with-dropdown" src="icon_female_with_dropdown.svg"/></a></div><div class="animal-toolbar-options"><a class="icon-button" href="#"><img class="icon" src="fullscreen.svg"/></a><a class="icon-button" href="#"><img class="icon" src="more_vert.svg"/></a></div>
             </div>
